@@ -18,11 +18,11 @@ fi
 
 echo ""
 echo "[ DISK CHECK ]"
-DISK=$(df / tail -1 | awk '{print $5}' | tr -d '$')
+DISK=$(df / | tail -1 | awk '{print $5}' | tr -d '%')
 if [ "$DISK" -gt "90" ]; then
     echo "[CRITICAL] Disk ${DISK}% full"
     ISSUES=$((ISSUES + 1))
-elif [ "$DISK" -gt "80"]; then
+elif [ "$DISK" -gt "80" ]; then
     echo "[HIGH]     Disk ${DISK}% full"
     ISSUES=$((ISSUES + 1))
 else
@@ -40,7 +40,7 @@ else
    echo "[OK]         Root SSH disabled"
 fi
 
-PASS=$(grep "PasswordAuthentification" \ 
+PASS=$(grep "PasswordAuthentication" \ 
 /etc/ssh/sshd_config 2>/dev/null)
 if echo "$PASS" | grep -q "yes"; then
     echo "[HIGH]     Password auth ON"
@@ -52,7 +52,7 @@ fi
 echo ""
 echo "[ FILE CHECK]"
 WORLD=$(find/etc -perm -0002 \
--type f 2>/dev/null | wc -1)
+-type f 2>/dev/null | wc -l)
 if [ "$WORLD" -gt "0" ]; then
     echo "[HIGH]     $WORLD world-writable files"
     ISSUES=$((ISSUES + 1))
