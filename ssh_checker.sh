@@ -43,7 +43,7 @@ fi
 echo ""
 echo "===================================="
 echo "  Issues Found: $ISSUES"
-if [ "$ISSUES" -eq "0"]; then
+if [ "$ISSUES" -eq "0" ]; then
     echo " SSH looks secure!"
 else 
     echo " Fix $ISSUES issues now!"
