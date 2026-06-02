@@ -1,4 +1,4 @@
-# 🛡️ server-hardener
+# 🛡️ Server-hardener
 
 > **Automated Linux Server Security Toolkit** — Audits users, SSH config, disk, processes, logs, and file permissions in one unified bash toolkit.
 
