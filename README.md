@@ -1,6 +1,6 @@
 # 🛡️ server-hardener
 
-> **Automated Linux Server Security Toolkit** — Audits users, SSH config, disk, processes, logs, and file permissions in one unified bash toolkit.
+> **Automated Linux Server SECURITY Toolkit** — Audits users, SSH config, disk, processes, logs, and file permissions in one unified bash toolkit.
 
 [![Bash](https://img.shields.io/badge/Bash-4.0%2B-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
